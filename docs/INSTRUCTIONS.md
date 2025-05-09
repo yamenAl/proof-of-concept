@@ -21,15 +21,15 @@ In de sprint Proof of Concept ga je een opdrachtgever helpen met een data-driven
 Op basis van een briefing ga je een opdrachtgever helpen met een data-driven online concept.
 
 
-* Maandag 3 juni krijg je een briefing bij de opdrachtgever. Tijdens de briefing maak je kennis met het bedrijf en wordt besproken wat je gaat maken. 
+* Maandag 2 juni krijg je een briefing bij de opdrachtgever. Tijdens de briefing maak je kennis met het bedrijf en wordt besproken wat je gaat maken. 
 
-* Je hebt 3 weken om de opdracht te maken. Hiervoor doorloop je de fases van de DLC [analyseren](#analyseren), [ontwerpen](#ontwerpen), [bouwen](#bouwen), [integreren](#integreren) en [testen](#testen) en pas je verschillende methoden en technieken toe die je hebt geleerd.  
+* Je hebt 3 weken om de opdracht te maken. 
 
-* Donderdag 20 juni ga je weer op bezoek ij de opdrachtgever en ga je laten zien wat je/jullie hebben gemaakt.
+* Donderdag 19 juni ga je weer op bezoek ij de opdrachtgever en ga je laten zien wat je/jullie hebben gemaakt.
 
-* Donderdag 4 juli organiseert FDNDN een EXPO voor bedrijven, vrienden en familie. Op de Expo laat je zien wat je hebt geleerd in het eerste jaar van de opleiding. 
+* Woensdag 2 juli organiseert FDNDN een EXPO voor bedrijven, vrienden en familie. Op de Expo laat je zien wat je hebt geleerd in het eerste jaar van de opleiding. 
 
-
+<!--
 ### Analyseren
 In de analysefase inventariseer je wat er moet gebeuren om een taak uit te voeren. 
 
@@ -64,8 +64,10 @@ Bijvoorbeeld: het comitten en pushen van code en publiceren met behulp van Githu
 In de testfase controleer je of jouw aanpassingen werken zoals bedoeld en pas je zo nodig jouw ontwerp of de code aan om te beantwoorden aan jouw bevindingen. 
 
 Bijvoorbeeld: uitvoeren van code/design reviews, user tests met gebruikers, toegankelijkheid testen met lighthouse en handmatige tests, je bevindingen documenteren en bepalen of je nog een iteratie maakt.
+-->
 
-## Criteria
+
+## Definitions of done
 
 Deze opdracht is done als:
 
