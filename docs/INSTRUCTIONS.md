@@ -68,11 +68,14 @@ Bijvoorbeeld: uitvoeren van code/design reviews, user tests met gebruikers, toeg
 ## Criteria
 
 Deze opdracht is done als:
-- [ ] Je hebt gewerkt volgens de verschillende fases van de development-lifecycle en je hebt je werk gedocumenteerd in de Readme en Wiki
-- [ ] Je toont aan dat je in de analysefase verschillende methoden en technieken hebt ingezet om te inventariseren wat er moet gebeuren
-- [ ] Je toont aan dat je in de ontwerpfase verschillende methoden en technieken hebt ingezet die ervoor zorgen dat je precies weet wat je moet bouwen
-- [ ] Je toont aan dat je in de bouwfase verschillende methoden en technieken hebt ingezet om het ontwerp te realiseren
-- [ ] Je toont aan dat je in de integratiefase verschillende methoden en technieken hebt ingezet om je website live te zetten
-- [ ] Je toont aan dat je in de testfase verschillende methoden en technieken hebt ingezet om het ontwerp te testen en verbeteren
+
+- [ ] Je hebt een website ontworpen en gemaakt met NodeJS, Express en Liquid en een REST API
+- [ ] Je hebt het briefing-debriefing proces doorlopen met de opdrachtgever en je vorderingen gepresenteerd tijdens de sprint review
 - [ ] De code staat op Github en heeft een live url
+- [ ] Jouw gebruikers kunnen iets achterlaten of toevoegen op jouw website
+- [ ] Je hebt verschillende performance technieken toegepast
+- [ ] Je hebt met client-side scripting de user experience van je website verbeterd
+- [ ] Je hebt client-side scripting technieken gebruikt voor een 'Pleasurable User Interface'
+ 
+
 
