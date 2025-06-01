@@ -11,10 +11,11 @@ Test de functional en reliable laag van jouw website en verzamel feedback op de 
 HTML en basic CSS testen op device lab
 Ook verschillende browser aanreiken.
 
+Toegankelijkheid test?
 Tab toets.
 
-Kan ook performance hierin? Performance en WCAG Audit laten plannen?
-
+Performance test? 
+Performance audit
 
 -->
 
