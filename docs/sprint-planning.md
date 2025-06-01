@@ -6,11 +6,16 @@ Project plannen en de briefing voorbereiden.
 
 ## Aanpak
 
+Doe de Sprint planning met de studenten die dezelfde opdrachtgever hebben.
+
 Op basis van een bestaand idee, concept of ontwerp ga je in 3 weken voor een opdrachtgever een server-side website met interacties en animaties ontwerpen en maken.
 
-Vandaag ga je de Repo alvast klaarzetten met een projectboard, daarna ga je de briefing voorbereiden. Zorg dat je opdrachtgever na de briefing zo snel mogelijk de debriefing krijgt om te checken of je de opdracht goed hebt begrepen. Daarna kan je beginnen met prototypen.
+### Planning maken
+Bekijk het programma van sprint 12, let op wat er tijdens de code/design review op het programma staat. Maak een projectboad aan en plan de stappen die je moet doorlopen.
 
-Doe de Sprint planning met de studenten die dezelfde opdrachtgever hebben.
+### Briefing voorbereiden 
+Bereid de briefing voor. Zorg dat je opdrachtgever na de briefing zo snel mogelijk de debriefing krijgt om te checken of je de opdracht goed hebt begrepen. Daarna kan je beginnen met prototypen. 
+
 
 <!--
 RAPPE principes laten terugkomen. (dit zijn ook de belangrijke principes voor het assessment - methodisch handelen)

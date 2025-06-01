@@ -43,7 +43,7 @@ Deze sprint worden verschillende workshops aangeboden:
 
 Deze opdracht is done als:
 
-- [ ] Je hebt een website ontworpen en gemaakt met NodeJS, Express en Liquid en een REST API, en je code staat op Github
+- [ ] Je hebt een website ontworpen en gemaakt voor een opdrachtgever met NodeJS, Express en Liquid en een REST API
 - [ ] Je website is online gepubliceerd
 - [ ] Je hebt het briefing-debriefing proces doorlopen met de opdrachtgever en je vorderingen gepresenteerd tijdens de sprint review
 - [ ] Jouw gebruikers kunnen iets achterlaten of toevoegen op jouw website
