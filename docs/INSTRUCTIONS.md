@@ -3,7 +3,7 @@
 Ontwerp en maak een data driven online concept voor een opdrachtgever.
 
 ## Context
-Deze leertaak hoort bij sprint _Proof of Concept_. Dit is een leertaak die je gaat uitvoeren voor een opdrachtgever.
+Deze leertaak hoort bij Sprint 12 _Proof of Concept_. Dit is een leertaak die je gaat uitvoeren voor een opdrachtgever.
 
 ## Doel van deze opdracht
 
@@ -21,7 +21,7 @@ Op basis van een bestaand idee, concept of ontwerp ga je in 3 weken voor een opd
 
 * Donderdag 19 juni ga je weer op bezoek bij de opdrachtgever en ga je laten zien wat je hebt gemaakt.
 
-* Woensdag 2 juli organiseert FDND een EXPO voor bedrijven, vrienden en familie. Op de Expo laat je zien wat je hebt geleerd in het eerste jaar van de opleiding.
+* Woensdag 2 juli organiseert FDND een EXPO voor bedrijven, opdrachtgevers, vrienden en familie. Op de Expo laat je zien wat je hebt geleerd in het eerste jaar van de opleiding.
 
 
 ### Workshops
@@ -30,9 +30,9 @@ Deze sprint worden verschillende workshops aangeboden:
 
 - [Sprint planning](sprint-planning.md)
 - [Progressive enhancement](progressive-enhancement.md)
-- [Code/Design review - functional & reliable](code-design-review-functional-reliable.md)
+- [Code/Design review - Functional & Reliable](code-design-review-functional-reliable.md)
 - [Usable](usable.md)
-- [Pleasuarble](pleasurable.md)
+- [Pleasurable](pleasurable.md)
 - [Code/Design review - User Testing](code-design-review-user-testing.md)
 - [Refactoring en Code Conventions](refactoring-code-conventions.md)
 - [Wrap up](wrap-up.md)
@@ -43,7 +43,7 @@ Deze sprint worden verschillende workshops aangeboden:
 
 Deze opdracht is done als:
 
-- [ ] Je hebt een website ontworpen en gemaakt voor een opdrachtgever met NodeJS, Express en Liquid en een REST API
+- [ ] Je hebt een website ontworpen en gemaakt voor een opdrachtgever met NodeJS, Express, Liquid en een REST API
 - [ ] Je website is online gepubliceerd
 - [ ] Je hebt het briefing-debriefing proces doorlopen met de opdrachtgever en je vorderingen gepresenteerd tijdens de sprint review
 - [ ] Jouw gebruikers kunnen iets achterlaten of toevoegen op jouw website
