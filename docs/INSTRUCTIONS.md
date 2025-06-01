@@ -21,7 +21,7 @@ Op basis van een bestaand idee, concept of ontwerp ga je in 3 weken voor een opd
 
 * Donderdag 19 juni ga je weer op bezoek ij de opdrachtgever en ga je laten zien wat je hebt gemaakt.
 
-* Woensdag 2 juli organiseert FDNDN een EXPO voor bedrijven, vrienden en familie. Op de Expo laat je zien wat je hebt geleerd in het eerste jaar van de opleiding.
+* Woensdag 2 juli organiseert FDND een EXPO voor bedrijven, vrienden en familie. Op de Expo laat je zien wat je hebt geleerd in het eerste jaar van de opleiding.
 
 
 ### Workshops

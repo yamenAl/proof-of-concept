@@ -19,13 +19,10 @@ Studenten zelf een planning laten maken van wat je elke vrijdag af moet/wil hebb
 Briefing voorbereiden en meteen debreifing (Zelfde als sprint 8)
 
 
-Welke schetstechnieken kan je na de brieing inzetten? Site map met url-design, routes en data fetch, wireframes met statische en dynamische data, wireflow voor interactie en animatie,. high res in Figma responsive layouts.
+Welke schetstechnieken kan je na de briefing inzetten? Sitemap met url-design, routes en data fetch, wireframes met statische en dynamische data, wireflow voor interactie en animatie,. high res in Figma responsive layouts.
 
-
-
-
-wel/geen NB';s?
-ma: Todo.: Zorg ervoor dat je zo snel mogelijk de debriefing opstuurt. Begin met het opzetten van je project in NodeJS en begin met je Prototype in HTML, de Styleguide en One Column Layout
+wel/geen NB's?
+ma: N.B.: Zorg ervoor dat je zo snel mogelijk de debriefing opstuurt. Begin met het opzetten van je project in NodeJS en begin met je Prototype in HTML, de Styleguide en One Column Layout
 wo: ⁠N.B.: Je hebt een prototype-in-html en een styleguide nodig om aan deze workshop deel te nemen!
 vrij: ⁠N.B.: Je hebt een werkende eerste versie nodig van je prorotype om aan deze workshop deel te nemen!
 di:
@@ -34,11 +31,7 @@ vrij: ⁠N.B.: Je hebt een beta versie van je (User Generated Content, PE, inter
 ma: ⁠N.B.: Je hebt de beta versie van jouw website nodig om deel te nemen aan de workshop.
 wo: ⁠N.B.: Je hebt de refactored versie van jouw website nodig om deel te nemen aan de workshop.
 
-
-
 -->
-
-
 
 <!--
 ### Analyseren
@@ -76,4 +69,3 @@ In de testfase controleer je of jouw aanpassingen werken zoals bedoeld en pas je
 
 Bijvoorbeeld: uitvoeren van code/design reviews, user tests met gebruikers, toegankelijkheid testen met lighthouse en handmatige tests, je bevindingen documenteren en bepalen of je nog een iteratie maakt.
 -->
-
