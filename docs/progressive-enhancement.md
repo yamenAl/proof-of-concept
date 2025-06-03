@@ -15,7 +15,7 @@ Bouwen volgens het principe van Progressive enhancement betekent dat je de websi
 2. Bouw die functionaliteit met de simpelste techniek (meestal HTML, met een klein beetje Mobile First CSS voor de huisstijl)
 3. Voeg daarna extra enhancements toe met CSS en client-side JS, om de User Experience te verbeteren! (de leukste stap, waar veel frontenders meteen heen springen)
 
-Begin met stap 1 en 2 voordat je met de enhancements aan de slag gaat. Het gaat zeker tijd schelen als je de basis eerst goed hebt staan. 
+Begin met stap 1 en 2 voordat je met de enhancements aan de slag gaat. Ik zeg je eerlijk, het gaat zeker tijd schelen als je eerst de basis goed opzet.
 
 ### One Column Layout
 
