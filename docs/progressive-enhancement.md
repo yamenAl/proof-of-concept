@@ -7,6 +7,8 @@
 Progressive enhancement is een van de principes waarmee je robuuste, betrouwbare websites kan ontwerpen en bouwen die het altijd doen, voor iedereen, in elke browser.
 
 
+
+
 ## Aanpak
 
 Bouwen volgens het principe van Progressive enhancement betekent dat je de website en componenten opbouwt in lagen: 
@@ -28,6 +30,10 @@ Bespreek je planning en aanpak met een docent.
 Maak eerst je pagina's in HTML en eenvoudige CSS met alle data voor de content, het menu, de footer enzovoort. In de one column layout is alles uitgeklapt en zit nog geen interactie. 
 
 Teken zo nodig een sitemap. Bedenk welke Url's de pagina's krijgen, met bijhorende routes. Teken Wireframes van de responsive layouts en geef aan of de content statisch of dynamisch is (dit kan je ook in Figma doen - jeweettoch). Onderzoek de API zodat je weet welke data je hebt en hoe je data kan fetchen. Maak een breakdown voor de HTML en CSS die je nodig denkt te hebben en noteer de bronnen die je hebt gebruikt.
+
+💡tip: bespreek je breakdown met een medestudent
+
+💡tip: Tag een docent in een issue als je de HTML af hebt voor een grondige review
 
 ### User Generated Content
 
