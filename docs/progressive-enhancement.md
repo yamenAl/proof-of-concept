@@ -41,6 +41,7 @@ Om ervoor te zorgen dat jouw gebruikers iets kunnen achterlaten of toevoegen op 
 
 Schets een Wireflow van jouw interactie. Bedenk nette URLs voor je pagina's en routes, en schrijf deze erbij. Annoteer je Wireflow met hints voor je dynamische data, en bedenk ook hoe je de POST in het server.js script verwerkt. Maak een breakdown voor de CSS en de HTML formulier elementen die je nodig hebt en noteer de bronnen.
 
+💡tip: schets samen met een medestudent of docenr de breakdown van de interactie
 
 <!--
 
