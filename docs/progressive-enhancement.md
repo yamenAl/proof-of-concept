@@ -2,7 +2,7 @@
 
 ## Progressive enhancement
 
-Over het bouwen van je website in lagen, en onderzoeken van de functional en reliable laag.
+<!--Over het bouwen van je website in lagen, en onderzoeken van de functional en reliable laag.-->
 
 Progressive enhancement is een van de principes waarmee je robuuste, betrouwbare websites kan ontwerpen en bouwen die het altijd doen, voor iedereen, in elke browser.
 
