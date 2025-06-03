@@ -22,7 +22,7 @@ Begin met stap 1 en 2 voordat je met de enhancements aan de slag gaat. Ik zeg je
 
 Maak eerst je pagina's in HTML en eenvoudige CSS met alle data voor de content, het menu, de footer enzovoort. In de one column layout is alles uitgeklapt en zit nog geen interactie. 
 
-Teken zo nodig een sitemap. Bedenk welke Url's de pagina's krijgen, met bijhorende routes. Teken wireframes van de responsive layouts en geef of de content statische of dynamische is. (dit kan je ook in Figma doen) Maak een breakdown voor de HTML en CSS die je nodig denkt te hebben en noteer de bronnen die je hebt gebruikt.
+Teken zo nodig een sitemap. Bedenk welke Url's de pagina's krijgen, met bijhorende routes. Teken wireframes van de responsive layouts en geef of de content statische of dynamische is. (dit kan je ook in Figma doen) Onderzoek de API zodat je weet welke data je hebt en hoe je dat kan fetchen. Maak een breakdown voor de HTML en CSS die je nodig denkt te hebben en noteer de bronnen die je hebt gebruikt.
 
 ### User Generated Content
 
