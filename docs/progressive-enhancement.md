@@ -9,7 +9,7 @@ Progressive enhancement is een van de principes waarmee je robuuste, betrouwbare
 🛝
 
 
-## Aanpak
+### Aanpak
 
 Bouwen volgens het principe van Progressive enhancement betekent dat je de website en componenten opbouwt in lagen: 
 <!-- Door je website en componenten in lagen te bouwen zorg je ervoor dat als een enhancement zoals een mooie animatie, of een interactie met client-side javascript niet door een browser kan worden uitgevoerd  -->
@@ -25,7 +25,7 @@ Ga daarna verder met de User Generated Contend en de POST.
 Bespreek je planning en aanpak met een docent. 
 
 
-### One Column Layout
+## One Column Layout
 
 Maak eerst je pagina's in HTML en eenvoudige CSS met alle data voor de content, het menu, de footer enzovoort. In de one column layout is alles uitgeklapt en zit nog geen interactie. 
 
@@ -35,7 +35,7 @@ Teken zo nodig een sitemap. Bedenk welke Url's de pagina's krijgen, met bijhoren
 
 💡double dip: Heb je de HTML af? Tag een docent in een issue voor een grondige review
 
-### User Generated Content
+## User Generated Content
 
 Om ervoor te zorgen dat jouw gebruikers iets kunnen achterlaten of toevoegen op jouw website heb je een POST interactie nodig. Volgens het principe van Progressive enhancement ontwerpt en bouwt je eerst de POST interactie Server-side. 
 
