@@ -25,7 +25,7 @@ Teken zo nodig een sitemap. Bedenk welke Url's de pagina's krijgen, met bijhoren
 
 ### User Generated Content
 
-Om ervoor te zorgen dat jouw gebruikers iets kunnen achterlaten of toevoegen op jouw website heb je POST functie nodig. Zorg dat de POST interactie eerst Server-side werkt. 
+Om ervoor te zorgen dat jouw gebruikers iets kunnen achterlaten of toevoegen op jouw website heb je POST functie nodig. Zorg dat de POST interactie eerst Server-side werkt als je je website PE ontwerpt en bouwt. daarna kan je de website enhancen met een client-side fetch.
 
 Schets een Wireflow van jouw interactie. Bedenk nette URLs voor je pagina's en routes, en schrijf deze erbij. Annoteer je Wireflow met hints voor je dynamische data, en bedenk ook hoe je de POST in het serverjs script verwerkt. Maak een breakdown voor de CSS en HTML formulier elementen die je nodig hebt en noteer de bronnen.
 
