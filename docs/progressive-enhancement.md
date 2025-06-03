@@ -6,7 +6,7 @@
 
 Progressive enhancement is een van de principes waarmee je robuuste, betrouwbare websites kan ontwerpen en bouwen die het altijd doen, voor iedereen, in elke browser.
 
-
+🛝
 
 
 ## Aanpak
@@ -31,17 +31,17 @@ Maak eerst je pagina's in HTML en eenvoudige CSS met alle data voor de content, 
 
 Teken zo nodig een sitemap. Bedenk welke Url's de pagina's krijgen, met bijhorende routes. Teken Wireframes van de responsive layouts en geef aan of de content statisch of dynamisch is (dit kan je ook in Figma doen - jeweettoch). Onderzoek de API zodat je weet welke data je hebt en hoe je data kan fetchen. Maak een breakdown voor de HTML en CSS die je nodig denkt te hebben en noteer de bronnen die je hebt gebruikt.
 
-💡tip: bespreek je breakdown met een medestudent
+💡tip: bespreek je breakdown met een medestudent 
 
-💡tip: Tag een docent in een issue als je de HTML af hebt voor een grondige review
+💡double dip: Heb je de HTML af? Tag een docent in een issue voor een grondige review
 
 ### User Generated Content
 
-Om ervoor te zorgen dat jouw gebruikers iets kunnen achterlaten of toevoegen op jouw website heb je een POST functie nodig. Als je je website volgens het principe van Progressive enhancement ontwerpt en bouwt, bouw eerst de POST interactie Server-side werkt. 
+Om ervoor te zorgen dat jouw gebruikers iets kunnen achterlaten of toevoegen op jouw website heb je een POST interactie nodig. Volgens het principe van Progressive enhancement ontwerpt en bouwt je eerst de POST interactie Server-side. 
 
-Schets een Wireflow van jouw interactie. Bedenk nette URLs voor je pagina's en routes, en schrijf deze erbij. Annoteer je Wireflow met hints voor je dynamische data, en bedenk ook hoe je de POST in het server.js script verwerkt. Maak een breakdown voor de CSS en de HTML formulier elementen die je nodig hebt en noteer de bronnen.
+Schets een Wireflow van jouw interactie. Bedenk nette URLs voor je pagina's en routes, en schrijf deze erbij. Annoteer je Wireflow met hints voor je dynamische data, en bedenk ook hoe je de POST in het server.js script verwerkt. Onderzoek HTML-formulier-elementen die je kan gebruiken, en maak een breakdown voor de CSS en de HTML en noteer de bronnen.
 
-💡tip: schets samen met een medestudent of docenr de breakdown van de interactie
+💡triple bogey: bespreek de breakdown-schets van de interactie met een docent
 
 <!--
 
