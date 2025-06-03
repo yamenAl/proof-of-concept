@@ -27,13 +27,13 @@ Bespreek je planning en aanpak met een docent.
 
 Maak eerst je pagina's in HTML en eenvoudige CSS met alle data voor de content, het menu, de footer enzovoort. In de one column layout is alles uitgeklapt en zit nog geen interactie. 
 
-Teken zo nodig een sitemap. Bedenk welke Url's de pagina's krijgen, met bijhorende routes. Teken wireframes van de responsive layouts en geef of de content statische of dynamische is. (dit kan je ook in Figma doen) Onderzoek de API zodat je weet welke data je hebt en hoe je dat kan fetchen. Maak een breakdown voor de HTML en CSS die je nodig denkt te hebben en noteer de bronnen die je hebt gebruikt.
+Teken zo nodig een sitemap. Bedenk welke Url's de pagina's krijgen, met bijhorende routes. Teken Wireframes van de responsive layouts en geef aan of de content statisch of dynamisch is (dit kan je ook in Figma doen - jeweettoch). Onderzoek de API zodat je weet welke data je hebt en hoe je data kan fetchen. Maak een breakdown voor de HTML en CSS die je nodig denkt te hebben en noteer de bronnen die je hebt gebruikt.
 
 ### User Generated Content
 
-Om ervoor te zorgen dat jouw gebruikers iets kunnen achterlaten of toevoegen op jouw website heb je POST functie nodig. Zorg dat de POST interactie eerst Server-side werkt als je je website PE ontwerpt en bouwt. daarna kan je de website enhancen met een client-side fetch.
+Om ervoor te zorgen dat jouw gebruikers iets kunnen achterlaten of toevoegen op jouw website heb je een POST functie nodig. Als je je website volgens het principe van Progressive enhancement ontwerpt en bouwt, bouw eerst de POST interactie Server-side werkt. 
 
-Schets een Wireflow van jouw interactie. Bedenk nette URLs voor je pagina's en routes, en schrijf deze erbij. Annoteer je Wireflow met hints voor je dynamische data, en bedenk ook hoe je de POST in het serverjs script verwerkt. Maak een breakdown voor de CSS en HTML formulier elementen die je nodig hebt en noteer de bronnen.
+Schets een Wireflow van jouw interactie. Bedenk nette URLs voor je pagina's en routes, en schrijf deze erbij. Annoteer je Wireflow met hints voor je dynamische data, en bedenk ook hoe je de POST in het server.js script verwerkt. Maak een breakdown voor de CSS en de HTML formulier elementen die je nodig hebt en noteer de bronnen.
 
 
 <!--
