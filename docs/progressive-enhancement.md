@@ -31,7 +31,7 @@ Maak eerst je pagina's in HTML en eenvoudige CSS met alle data voor de content, 
 
 Teken zo nodig een sitemap. Bedenk welke Url's de pagina's krijgen, met bijhorende routes. Teken Wireframes van de responsive layouts en geef aan of de content statisch of dynamisch is (dit kan je ook in Figma doen - jeweettoch). Onderzoek de API zodat je weet welke data je hebt en hoe je data kan fetchen. Maak een breakdown voor de HTML en CSS die je nodig denkt te hebben en noteer de bronnen die je hebt gebruikt.
 
-💡tip: bespreek je breakdown met een medestudent 
+💡tip: Bespreek je breakdown met een medestudent 
 
 💡double dip: Heb je de HTML af? Tag een docent in een issue voor een grondige review
 
@@ -41,7 +41,7 @@ Om ervoor te zorgen dat jouw gebruikers iets kunnen achterlaten of toevoegen op 
 
 Schets een Wireflow van jouw interactie. Bedenk nette URLs voor je pagina's en routes, en schrijf deze erbij. Annoteer je Wireflow met hints voor je dynamische data, en bedenk ook hoe je de POST in het server.js script verwerkt. Onderzoek HTML-formulier-elementen die je kan gebruiken, en maak een breakdown voor de CSS en de HTML en noteer de bronnen.
 
-💡triple bogey: bespreek de breakdown-schets van de interactie met een docent
+💡triple bogey: Ben je nog niet helemaal _on par_ met POST? Bespreek dan de breakdown-schets van de interactie met een docent voordat je gaat coderen
 
 <!--
 
