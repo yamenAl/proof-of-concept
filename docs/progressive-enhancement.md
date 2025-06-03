@@ -4,9 +4,10 @@
 
 Over het bouwen van je website in lagen, en onderzoeken van de functional en reliable laag.
 
-## Aanpak
-
 Progressive enhancement is een van de principes waarmee je robuuste, betrouwbare websites kan ontwerpen en bouwen die het altijd doen, voor iedereen, in elke browser.
+
+
+## Aanpak
 
 Bouwen volgens het principe van Progressive enhancement betekent dat je de website en componenten opbouwt in lagen: 
 <!-- Door je website en componenten in lagen te bouwen zorg je ervoor dat als een enhancement zoals een mooie animatie, of een interactie met client-side javascript niet door een browser kan worden uitgevoerd  -->
