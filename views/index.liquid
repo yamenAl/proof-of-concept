@@ -1,0 +1,24 @@
+{% render 'partials/head.liquid' %}
+{% include 'partials/header.liquid' %} 
+
+
+<body>
+<!-- This section is for displaying a role avatar -->
+  <section>
+      <a href="/{{ role }}" class="role-button" >
+        <img src="/assets/photos/avatars/{{ role }}.png" alt="{{ role }} avatar">
+        <h2 class="label">{{ role  | capitalize }}</h2>
+      </a>
+  </section>
+  
+ <!-- This section is for the 'New Role' button -->
+  <article class="newRole-button">
+    <h2 >New Role</h2>
+    <a href="/" class="go-button">Role</a>
+  </article>
+
+</body>
+
+
+
+{% render 'partials/foot.liquid' %}
