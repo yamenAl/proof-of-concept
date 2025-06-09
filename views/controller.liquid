@@ -6,7 +6,15 @@
 <section class="controller-page">
 
   <section class="avatar-section">
-    <img class="avatar-img" src="/assets/photos/avatars/{{ commonData.roleName }}.png" alt="{{ commonData.roleName }} avatar">
+     <picture>
+            <source srcset="/assets/photos/avatars/{{ commonData.roleName  | downcase }}.webp" type="image/webp">
+            <img 
+              src="/assets/photos/avatars/{{ commonData.roleName  | downcase }}.png" 
+              alt="{{ commonData.roleName }} avatar"
+              width="150" height="150"
+            >
+          </picture>
+
     <h1 class="role-name">{{ commonData.roleName | capitalize }}</h1>
     <p class="user-name">{{ commonData.displayName | split: " " | first }}</p>
   </section>
