@@ -1,14 +1,20 @@
 <header>
   <button class="menu-toggle">☰</button>
-  {% for role in roles %}
+{% for role in roles %}
   <nav class="side-menu">
     <button class="menu-close">&times;</button>
     <div class="profile">
-      <img src="/assets/photos/avatars/{{ role }}.png" alt="avatar" />
+      <picture>
+        <source srcset="/assets/photos/avatars/{{ role | downcase }}.webp" type="image/webp">
+        <img 
+          src="/assets/photos/avatars/{{ role | downcase }}.png" 
+          alt="Avatar for {{ role }} role"
+          width="150" height="150"
+        >
+      </picture>
       <h2>{{ role }}</h2>
     </div>
     {% endfor %}
-
     <ul>
       {% for role in rolesList %}
         <li><a href="/{{ role | downcase }}">{{ role }}</a></li>
