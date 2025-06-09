@@ -1,24 +1,36 @@
 {% render 'partials/head.liquid' %}
-{% include 'partials/header.liquid' %} 
+{% include 'partials/header.liquid' %}
+
+  <main class="main-content">
+    {% block content %}{% endblock %}
+
+    <!-- Roles List -->
+    <section class="roles-list" aria-label="Roles List">
+      {% for role in roles %}
+        <a href="/{{ role | downcase }}" class="role-button">
+          <picture>
+            <source srcset="/assets/photos/avatars/{{ role }}.webp" type="image/webp">
+            <img 
+              src="/assets/photos/avatars/{{ role }}.png" 
+              alt="Avatar for {{ role | capitalize }} role"
+              width="150" height="150"
+            >
+          </picture>
+          <h2 class="label">{{ role | capitalize }}</h2>
+        </a>
+      {% endfor %}
+    </section>
+
+    <!-- New Role Buttons -->
+    <article class="newRole-button">
+      <h2>New Role</h2>
+      <a href="/" class="go-button">Role</a>
+      <a href="/?seen={{ roles | join: ',' }}">Get another role</a>
+    </article>
+  </main>
+
+  {% render 'partials/foot.liquid' %}
 
 
-<body>
-<!-- This section is for displaying a role avatar -->
-  <section>
-      <a href="/{{ role }}" class="role-button" >
-        <img src="/assets/photos/avatars/{{ role }}.png" alt="{{ role }} avatar">
-        <h2 class="label">{{ role  | capitalize }}</h2>
-      </a>
-  </section>
-  
- <!-- This section is for the 'New Role' button -->
-  <article class="newRole-button">
-    <h2 >New Role</h2>
-    <a href="/" class="go-button">Role</a>
-  </article>
-
-</body>
 
 
-
-{% render 'partials/foot.liquid' %}
