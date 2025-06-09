@@ -1,0 +1,18 @@
+<header>
+  <button class="menu-toggle">☰</button>
+  {% for role in roles %}
+  <nav class="side-menu">
+    <button class="menu-close">&times;</button>
+    <div class="profile">
+      <img src="/assets/photos/avatars/{{ role }}.png" alt="avatar" />
+      <h2>{{ role }}</h2>
+    </div>
+    {% endfor %}
+
+    <ul>
+      {% for role in rolesList %}
+        <li><a href="/{{ role | downcase }}">{{ role }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
