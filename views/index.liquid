@@ -9,9 +9,9 @@
       {% for role in roles %}
         <a href="/{{ role | downcase }}" class="role-button">
           <picture>
-            <source srcset="/assets/photos/avatars/{{ role }}.webp" type="image/webp">
+            <source srcset="/assets/photos/avatars/{{ role | downcase }}.webp" type="image/webp">
             <img 
-              src="/assets/photos/avatars/{{ role }}.png" 
+              src="/assets/photos/avatars/{{ role | downcase }}.png" 
               alt="Avatar for {{ role | capitalize }} role"
               width="150" height="150"
             >
