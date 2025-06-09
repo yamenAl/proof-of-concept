@@ -1,0 +1,90 @@
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.roles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.role-button {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+.role-button:hover {
+  transform: scale(1.05);
+}
+
+.role-button picture,
+.role-button picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 6px 0;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.newRole-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.go-button {
+  padding: 0.75rem 1.5rem;
+  background: #6a4cff;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.go-button:hover {
+  background: #5840d4;
+}
+
+
+
+/* Floating animation */
+@keyframes float {
+  0%   { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  25%  { transform: translateY(-4px) translateX(2px) rotate(1deg); }
+  50%  { transform: translateY(4px) translateX(-2px) rotate(-1deg); }
+  75%  { transform: translateY(-3px) translateX(1px) rotate(0.5deg); }
+  100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+}
+
