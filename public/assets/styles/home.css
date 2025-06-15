@@ -1,90 +1,126 @@
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo h1 {
-  font-size: 24px;
-  font-weight: 800;
-}
-
-.roles-grid {
+.roles-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
   justify-content: center;
-  margin-top: 2rem;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-sm);
 }
 
 .role-button {
-  position: relative;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  animation: float 3s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: var(--spacing-md);
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease, 
+  box-shadow 0.3s ease;
+  text-decoration: none; 
+
 }
 
 .role-button:hover {
-  transform: scale(1.05);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
-.role-button picture,
-.role-button picture img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.role-button img {
+  border-radius: 50%;
+  border: 4px solid var(--snow);
+  margin-bottom: var(--spacing-sm);
+  transition: border-color 0.3s ease;
 }
 
-.label {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+.role-button:hover img {
+  border-color: var(--xiketic);
+}
+
+.role-button .label {
+  font-size: var(--text-md);
+  color: var(--xiketic);
+  transition: color 0.3s ease;
+}
+
+.role-button:hover .label {
+  color: var(--majorelle-blue);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .role-button {
+    background-color: var(--raisin-black);
+  }
+
+  .role-button .label {
+    color: var(--white);
+  }
+
+  .role-button img {
+    border-color: var(--sonic-silver);
+  }
+}
+
+/* New Role Section */
+.new-role-button {
+  margin: var(--spacing-lg) auto;
+  padding: var(--spacing-md) var(--spacing-sm);
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 6px 0;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
 }
 
-.newRole-button {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
+.new-role-button h2 {
+  font-size: var(--text-md);
+  color: var(--xiketic);
+  margin-bottom: var(--spacing-sm);
 }
 
-.go-button {
+.new-role-button a {
+  display: inline-block;
+  margin: 0 var(--spacing-xs);
   padding: 0.75rem 1.5rem;
-  background: #6a4cff;
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
+  border-radius: 2rem;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.new-role-button .go-button {
+  background-color: var(--majorelle-blue);
+  color: var(--white);
   border: none;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: background 0.3s ease;
 }
 
-.go-button:hover {
-  background: #5840d4;
+.new-role-button .go-button:hover {
+  background-color: var(--orange-crayola);
 }
 
-
-
-/* Floating animation */
-@keyframes float {
-  0%   { transform: translateY(0px) translateX(0px) rotate(0deg); }
-  25%  { transform: translateY(-4px) translateX(2px) rotate(1deg); }
-  50%  { transform: translateY(4px) translateX(-2px) rotate(-1deg); }
-  75%  { transform: translateY(-3px) translateX(1px) rotate(0.5deg); }
-  100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+.new-role-button .alt-button {
+  background-color: transparent;
+  color: var(--majorelle-blue);
+  border: 2px solid var(--majorelle-blue);
 }
 
+.new-role-button .alt-button:hover {
+  background-color: var(--majorelle-blue);
+  color: var(--white);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .new-role-button h2 {
+    color: var(--white);
+  }
+
+  .new-role-button .alt-button {
+    color: var(--white);
+    border-color: var(--white);
+  }
+
+  .new-role-button .alt-button:hover {
+    background-color: var(--white);
+    color: var(--xiketic);
+  }
+}
