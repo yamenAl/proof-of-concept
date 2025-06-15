@@ -1,36 +1,35 @@
 {% render 'partials/head.liquid' %}
 {% include 'partials/header.liquid' %}
 
-  <main class="main-content">
-    {% block content %}{% endblock %}
+<main class="main-content">
 
-    <!-- Roles List -->
-    <section class="roles-list" aria-label="Roles List">
-      {% for role in roles %}
-        <a href="/{{ role | downcase }}" class="role-button">
-          <picture>
-            <source srcset="/assets/photos/avatars/{{ role | downcase }}.webp" type="image/webp">
-            <img 
-              src="/assets/photos/avatars/{{ role | downcase }}.png" 
-              alt="Avatar for {{ role  }} role"
-              width="150" height="150"
-            >
-          </picture>
-          <h2 class="label">{{ role | capitalize }}</h2>
-        </a>
-      {% endfor %}
-    </section>
+  <!-- Roles List -->
+  <section class="roles-list" label="Roles list">
+    {% for role in roles %}
+      <a href="/{{ role | downcase }}" class="role-button">
+        <picture>
+          <source 
+            srcset="/assets/photos/avatars/{{ role | downcase }}.webp" 
+            type="image/webp"
+          >
+          <img 
+            src="/assets/photos/avatars/{{ role | downcase }}.png" 
+            alt="Avatar for {{ role }} role"
+            width="150" height="150" 
+            loading="lazy"
+          >
+        </picture>
+        <h2 class="label">{{ role | capitalize }}</h2>
+      </a>
+    {% endfor %}
+  </section>
 
-    <!-- New Role Buttons -->
-    <article class="newRole-button">
-      <h2>New Role</h2>
-      <a href="/" class="go-button">Role</a>
-      <a href="/?seen={{ roles | join: ',' }}">Get another role</a>
-    </article>
-  </main>
+  <!-- New Role Buttons -->
+  <article class="new-role-button">
+    <h2>New Role</h2>
+    <a href="/" class="go-button">Role</a>
+    <a href="/?seen={{ roles | join: ',' }}" class="alt-button">Get another role</a>
+  </article>
+</main>
 
-  {% render 'partials/foot.liquid' %}
-
-
-
-
+{% render 'partials/foot.liquid' %}
