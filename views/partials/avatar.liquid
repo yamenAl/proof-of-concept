@@ -1,0 +1,70 @@
+<section class="hero">
+  
+  <a href="/{{ roleName }}" class="circle-btn" aria-label="Open menu">→</a>
+
+  <h2 class="role">{{ roleName | capitalize }}</h2>
+
+  <picture>
+    <img src="/assets/photos/avatars/{{ roleName | downcase }}.png" alt="{{ roleName }}" class="avatar" />
+  </picture>
+
+   <p class="btn timeline-btn mt-lg">{{ commonData.displayName | split: " " | first }}</p>
+
+
+</section>
+
+
+<section class="carousel carousel--markers mt-sm">
+  <!-- Slide 1 -->
+  <article class="carousel__slide" data-label="User">
+    <figure class="card ">
+      <h2>User ID</h2>
+      <p>{{ commonData.userId }}</p>
+    </figure>
+  </article>
+
+  <!-- Slide 2 -->
+  <article class="carousel__slide" data-label="Name">
+    <figure class="card ">
+      <h2>Display Name</h2>
+      <p>{{ commonData.displayName }}</p>
+    </figure>
+  </article>
+
+  <!-- Slide 3 -->
+  <article class="carousel__slide" data-label="Role">
+    <figure class="card">
+      <h2>Role</h2>
+      <p>{{ commonData.roleName }}</p>
+    </figure>
+  </article>
+
+  <!-- Slide 4 -->
+  <article class="carousel__slide" data-label="Company">
+    <figure class="card ">
+      <h2>Company</h2>
+      <p>{{ commonData.companyName }}</p>
+    </figure>
+  </article>
+
+  <!-- Slide 5 -->
+  <article class="carousel__slide" data-label="Dashboard">
+    <figure class="card ">
+      <h2>Dashboard</h2>
+      <p>{{ commonData.dashboardTitle }}</p>
+    </figure>
+  </article>
+
+  <!-- Slide 6+ -->
+  {% assign perspectiveParts = commonData.companyPerspectiveHtml | split: '</p>' %}
+  {% for part in perspectiveParts %}
+    {% if part != '' %}
+      <article class="carousel__slide" data-label="Perspective">
+        <figure class="card">
+          <h2>Perspective</h2>
+          <p>{{ part | append: '</p>' | raw }}</p>
+        </figure>
+      </article>
+    {% endif %}
+  {% endfor %}
+</section>
