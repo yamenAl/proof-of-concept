@@ -1,0 +1,92 @@
+{% render 'partials/head.liquid' %}
+{% include 'partials/header.liquid' %}
+{% include 'partials/avatar.liquid' %}
+
+<body>
+  <!-- Favorite Form & Find New Profile -->
+  <section class="button-row-center mt-lg">
+    <form method="POST" action="/favorites">
+      <input type="hidden" name="role" value="{{ roleName }}">
+      <input type="hidden" name="personName" value="{{ commonData.displayName }}">
+      <button type="submit" class="btn-large">
+        {% if isFavorite %}★ Remove Favorite
+        {% else %}☆ Add to Favorites{% endif %}
+      </button>
+    </form>
+    <a href="/{{ roleName }}" class="btn-large">Find new one</a>
+  </section>
+
+  <!-- Product Carousel -->
+  <section class="product-carousel mt-lg">
+    <article class="carousel-track">
+      {% for product in roleSpecificData.productCatalogs %}
+        <section class="product-detail-banner slide {% unless forloop.first %}hidden{% endunless %}">
+          <h1>Product Catalogs {{ product.productName }}</h1>
+          <section class="introductie">
+            <h1>Details</h1>
+            <ul class="labels">
+              <li class="label"><p><strong>ID:</strong> {{ product.productId }}</p></li>
+              <li class="label"><p><strong>SKU:</strong> {{ product.SKU }}</p></li>
+              <li class="label"><p><strong>Prijs:</strong> ${{ product.price }}</p></li>
+            </ul>
+            <p>{{ product.description }}</p>
+            <section class="features-section">
+              <h2>Belangrijkste functies:</h2>
+              <ul class="features">
+                {% for feature in product.features %}
+                  <li>{{ feature }}</li>
+                {% endfor %}
+              </ul>
+              <button class="red-btn next-btn">Next product</button>
+            </section>
+          </section>
+        </section>
+      {% endfor %}
+    </article>
+  </section>
+
+  <!-- Sales Leads Carousel -->
+  <section class="sales-carousel mt-lg">
+    <article class="carousel-track">
+      {% for lead in roleSpecificData.currentSalesLeads %}
+        <section class="lead-detail-banner slide {% unless forloop.first %}hidden{% endunless %}">
+          <h1>Current Sales Leads {{ lead.clientName }}</h1>
+          <section class="introductie">
+            <ul class="labels">
+              <li class="label"><p><strong>Lead ID:</strong> {{ lead.leadId }}</p></li>
+              <li class="label"><p><strong>Value:</strong> ${{ lead.potentialValue }}</p></li>
+              <li class="label"><p><strong>Status:</strong> {{ lead.status }}</p></li>
+              <li class="label"><p><strong>Next Action:</strong> {{ lead.nextAction }}</p></li>
+              <li class="label"><p><strong>Email:</strong> <a href="mailto:{{ lead.contactEmail }}">{{ lead.contactEmail }}</a></p></li>
+            </ul>
+            <button class="red-btn next-btn">Next Lead</button>
+          </section>
+        </section>
+      {% endfor %}
+    </article>
+  </section>
+
+  <!-- Sales Performance & Compensation -->
+  <section class="card-pair-layout">
+    <section class="detail-card">
+      <h2>Sales Targets</h2>
+      <ul class="labels">
+        <li><strong>Monthly Target:</strong> ${{ roleSpecificData.salesTargets.monthlyTarget }}</li>
+        <li><strong>YTD Actual:</strong> ${{ roleSpecificData.salesTargets.ytdActual }}</li>
+        <li><strong>Target Achieved %:</strong> {{ roleSpecificData.salesTargets.targetAchievedPercentage }}%</li>
+        <li><strong>Next Milestone:</strong> {{ roleSpecificData.salesTargets.nextMilestone }}</li>
+      </ul>
+    </section>
+
+    <section class="detail-card">
+      <h2>Commission Structure</h2>
+      <ul class="labels">
+        <li><strong>Base Salary:</strong> ${{ roleSpecificData.commissionStructure.baseSalary }}</li>
+        <li><strong>Tier 1:</strong> {{ roleSpecificData.commissionStructure.commissionRateTier1 }}</li>
+        <li><strong>Tier 2:</strong> {{ roleSpecificData.commissionStructure.commissionRateTier2 }}</li>
+        <li><strong>Tier 3:</strong> {{ roleSpecificData.commissionStructure.commissionRateTier3 }}</li>
+        <li><strong>Bonus:</strong> {{ roleSpecificData.commissionStructure.bonus }}</li>
+      </ul>
+    </section>
+  </section>
+</body>
