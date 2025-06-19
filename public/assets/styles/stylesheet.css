@@ -126,7 +126,7 @@ p, li {
 /* === THEMES === */
 .theme-controller, .theme-grower { background: var(--granny-smith-apple);
  &:hover {
-      background-color: var(--orange-crayol);
+      background-color: var(--majorelle-blue);
     }
  }
 .theme-mechanic, .theme-salesman { background: var(--orange-crayola);
