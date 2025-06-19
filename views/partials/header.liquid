@@ -1,24 +1,58 @@
-<header>
-  <button class="menu-toggle">☰</button>
-{% for role in roles %}
-  <nav class="side-menu">
-    <button class="menu-close">&times;</button>
-    <div class="profile">
-      <picture>
-        <source srcset="/assets/photos/avatars/{{ role | downcase }}.webp" type="image/webp">
-        <img 
-          src="/assets/photos/avatars/{{ role | downcase }}.png" 
-          alt="Avatar for {{ role }} role"
-          width="150" height="150"
-        >
-      </picture>
-      <h2>{{ role }}</h2>
-    </div>
-    {% endfor %}
-    <ul>
-      {% for role in rolesList %}
-        <li><a href="/{{ role | downcase }}">{{ role }}</a></li>
+
+
+
+<header class="site-header">
+  <!-- Menu Toggle  -->
+  <button class="menu-toggle" label="Open menu">☰</button>
+
+  <!-- Navigation Menu -->
+  <nav class="menu">
+    <button class="menu-close" label="Close menu">
+      <svg viewBox="0 0 32 32" width="32" height="32">
+        <title>Sluiten</title>
+        <path d="M31.708 25.708l-9.708-9.708 9.708-9.708c0.105-0.105 0.18-0.227 0.229-0.357 
+          0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229 
+          -0.13 0.048-0.252 0.124-0.357 0.228l-9.708 9.708-9.708-9.708c-0.105-0.104-0.227-0.18 
+          -0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702 
+          -0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357l9.708 9.708-9.708 9.708c-0.104 0.105 
+          -0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 
+          0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229l9.708-9.708 9.708 9.708 
+          c0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586 
+          c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"></path>
+      </svg>
+    </button>
+
+    {% if roles.size == 1 %}
+      {% for role in roles %}
+        <section class="profile">
+          <picture>
+            <source srcset="/assets/photos/avatars/{{ role | downcase }}.webp" type="image/webp">
+            <img 
+              src="/assets/photos/avatars/{{ role | downcase }}.png"
+              alt="Avatar for {{ role }}"
+              width="100"
+              height="100"
+              loading="lazy">
+          </picture>
+          <h2>{{ role }}</h2>
+        </section>
       {% endfor %}
-    </ul>
+    {% endif %}
+
+    <ul id="role-list"></ul>
+    <a href="/">Home</a>
   </nav>
+
+  <!-- Logo  -->
+  <a class="site-logo" href="/">
+    <picture>
+      <source srcset="/assets/photos/icons/logo.webp" type="image/webp">
+      <img 
+        src="/assets/photos/icons/logo.png"
+        alt="CitySprout logo"
+        width="100"
+        height="100"
+        loading="lazy">
+    </picture>
+  </a>
 </header>
