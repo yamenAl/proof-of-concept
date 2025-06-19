@@ -1,0 +1,32 @@
+{% render 'partials/head.liquid' %}
+
+<!-- This is the favorites section -->
+<section class="favorites-section">
+  <h1>Favorites</h1>
+
+  <!-- List of favorite people -->
+  <ul class="favorites-list">
+    {% for fav in favorites %}
+      <li class="favorite-card">
+
+        <!-- Click to see more about this person -->
+        <a class="favorite-link" href="/favorites/view/{{ fav.role | downcase }}/{{ fav.name | downcase | replace: ' ', '-' }}">
+          <img src="/assets/photos/avatars/{{ fav.role | downcase }}.png" alt="{{ fav.name }}" />
+          <h3>{{ fav.name | split: " " | first }}</h3>
+          <p>{{ fav.role }}</p>
+        </a>
+
+        <!-- Button to remove this favorite -->
+        <form method="POST" action="/favorites" onsubmit="return confirm('Are you sure you want to remove this favorite?');">
+          <input type="hidden" name="role" value="{{ fav.role }}">
+          <input type="hidden" name="personName" value="{{ fav.name }}">
+          <button class="remove-btn" type="submit">Remove</button>
+        </form>
+
+      </li>
+    {% endfor %}
+  </ul>
+  <!-- Link to go back home -->
+  <a class="back-link" href="/">← Back to Home</a>
+</section>
+
