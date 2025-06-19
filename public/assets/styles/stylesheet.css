@@ -106,15 +106,8 @@ p, li {
 
 /*  BUTTONS  */
 .btn {
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 2rem;
-  font-size: var(--text-xs);
-  font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
-  background: var(--majorelle-blue);
-  color: var(--white);
 }
 
 .btn:hover {
@@ -122,9 +115,21 @@ p, li {
 }
 
 /* === THEMES === */
-.theme-controller, .theme-grower { background: var(--granny-smith-apple); }
-.theme-mechanic, .theme-salesman { background: var(--orange-crayola); }
-.theme-orderer, .theme-boss { background: var(--majorelle-blue); }
+.theme-controller, .theme-grower { background: var(--granny-smith-apple);
+ &:hover {
+      background-color: var(--orange-crayol);
+    }
+ }
+.theme-mechanic, .theme-salesman { background: var(--orange-crayola);
+ &:hover {
+      background-color: var(--granny-smith-apple);
+    }
+ }
+.theme-orderer, .theme-boss { background: var(--majorelle-blue);
+ &:hover {
+      background-color: var(--granny-smith-apple);
+    }
+ }
 .theme-dark { background: var(--xiketic); color: var(--white); }
 
 /*  SPACING UNIT  */
