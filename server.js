@@ -62,11 +62,6 @@ app.get('/', async (req, res) => {
 app.get('/:role', async (req, res) => {
   const role = req.params.role.toLowerCase()
 
-    // Check role 
-  if (!roles.includes(role)) {
-    return res.status(404).render("error"); // Show error page
-  }
-
   const apiUrl = `https://fdnd-fresk-api.netlify.app/get-content-by-role?userRole=${encodeURIComponent(role)}`
   
   try {
