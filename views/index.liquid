@@ -1,5 +1,23 @@
 {% render 'partials/head.liquid' %}
 {% include 'partials/header.liquid' %}
+<!--skeleton section-->
+<section id="index-skeleton" class="index-skeleton">
+  <div class="roles-list">
+    {% for i in (1..6) %}
+      <div class="role-button skeleton-card">
+        <div class="skeleton-avatar"></div>
+        <div class="skeleton-label"></div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <article class="new-role-button">
+    <div class="skeleton-btn-group">
+      <div class="skeleton-btn"></div>
+      <div class="skeleton-btn alt"></div>
+    </div>
+  </article>
+</section>
 
 
 <main class="main-content hidden">
