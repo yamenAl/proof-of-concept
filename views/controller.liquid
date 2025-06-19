@@ -1,164 +1,19 @@
 {% render 'partials/head.liquid' %}
 {% include 'partials/header.liquid' %}
+{% include 'partials/avatar.liquid' %}
 
-
-
-<section class="controller-page">
-
-  <section class="avatar-section">
-     <picture>
-            <source srcset="/assets/photos/avatars/{{ commonData.roleName  | downcase }}.webp" type="image/webp">
-            <img 
-              src="/assets/photos/avatars/{{ commonData.roleName  | downcase }}.png" 
-              alt="{{ commonData.roleName }} avatar"
-              width="150" height="150"
-            >
-          </picture>
-
-    <h1 class="role-name">{{ commonData.roleName | capitalize }}</h1>
-    <p class="user-name">{{ commonData.displayName | split: " " | first }}</p>
+<body>
+  <!-- Favorite Form & Find New Profile -->
+  <section class="button-row-center mt-lg">
+    <form method="POST" action="/favorites">
+      <input type="hidden" name="role" value="{{ roleName }}">
+      <input type="hidden" name="personName" value="{{ commonData.displayName }}">
+      <button type="submit" class="btn-large">
+        {% if isFavorite %}★ Remove Favorite
+        {% else %}☆ Add to Favorites{% endif %}
+      </button>
+    </form>
+    <a href="/{{ roleName }}" class="btn-large">Find new one</a>
   </section>
-
-  <section class="dot-cot">
-    <h2 class="visually-hidden">Project Timelines</h2>
-
-    <section class="dot-track">
-      {% for timeline in roleObject.roleSpecificData.activeProjectTimelines %}
-        <article class="slide">
-          <h2 class="slide-title">Active Project Timelines</h2>
-          <section class="info-cards">
-            <h3 class="visually-hidden">Timeline Info</h3>
-            <article class="info-card">
-              <h4 class="info-label">Client</h4>
-              <p class="info-value">{{ timeline.clientName }}</p>
-            </article>
-            <article class="info-card">
-              <h4 class="info-label">System Type</h4>
-              <p class="info-value">{{ timeline.systemType }}</p>
-            </article>
-            <article class="info-card">
-              <h4 class="info-label">Status</h4>
-              <p class="info-value">{{ timeline.currentStatus }} ({{ timeline.percentageComplete }}%)</p>
-            </article>
-          </section>
-        </article>
-      {% endfor %}
-
-      {% for budget in roleObject.roleSpecificData.projectBudgetVsActuals %}
-      <article class="slide">
-        <h2 class="slide-title">Project Budgets vs Actuals</h2>
-        <section class="info-cards">
-          <article class="info-card">
-            <h3 class="info-label">Project</h3>
-            <p class="info-value">{{ budget.projectName }}</p>
-          </article>
-          <article class="info-card">
-            <h3 class="info-label">Total Budget</h3>
-            <p class="info-value">{{ budget.totalBudget }}</p>
-          </article>
-          <article class="info-card">
-            <h3 class="info-label">Variance</h3>
-            <p class="info-value">{{ budget.variance }}</p>
-          </article>
-        </section>
-      </article>
-      {% endfor %}
-
-    </section>
- <!-- Dots navigation -->
-    <nav class="dots-navigation" aria-label="Dots Navigation">
-      {% assign totalTimelines = roleObject.roleSpecificData.activeProjectTimelines.size %}
-      {% assign totalBudgets = roleObject.roleSpecificData.projectBudgetVsActuals.size %}
-      {% assign totalSlides = totalTimelines | plus: totalBudgets %}
-      {% assign lastIndex = totalSlides | minus: 1 %}
-      {% for i in (0..lastIndex) %}
-        <span class="dot{% if forloop.first %} active{% endif %}" data-index="{{ i }}"></span>
-      {% endfor %}
-    </nav>
-  </section>
-</section>
-
-<!-- Expandable section -->
-<section class="expandable">
-  <header class="section-header">
-    <button class="arrow-toggle" aria-label="Expand section">⬇</button>
-  </header>
-
-  <article class="section-content">
-    <p>Name: {{ commonData.displayName | split: " " | first }}</p>
-    <p>Role: {{ commonData.roleName }}</p>
-    <p>Company: {{ commonData.companyName }}</p>
-    <p>Unread Notifications: {{ commonData.unreadNotificationsCount }}</p>
-
-    <section>
-      <h2>Company Perspective</h2>
-      <div>{{ commonData.companyPerspectiveHtml | raw }}</div>
-    </section>
-
-    <section>
-      <h2>Active Project Timelines</h2>
-      <ul>
-        {% for project in roleObject.roleSpecificData.activeProjectTimelines %}
-          <li>
-            <strong>Client:</strong> {{ project.clientName }}<br>
-            <strong>System Type:</strong> {{ project.systemType }}<br>
-            <strong>Status:</strong> {{ project.currentStatus }} ({{ project.percentageComplete }}%)<br>
-            <strong>Dates:</strong> {{ project.startDate }} - {{ project.expectedEndDate }}<br>
-            <strong>Manager:</strong> {{ project.projectManager }}
-          </li>
-        {% endfor %}
-      </ul>
-    </section>
-
-    <section>
-      <h2>Budgets vs Actuals</h2>
-      <ul>
-        {% for budget in roleObject.roleSpecificData.projectBudgetVsActuals %}
-          <li>
-            <strong>Project:</strong> {{ budget.projectName }}<br>
-            <strong>Budget:</strong> €{{ budget.totalBudget }}<br>
-            <strong>Spent:</strong> €{{ budget.actualSpend }}<br>
-            <strong>Variance:</strong> €{{ budget.variance }} ({{ budget.variancePercentage }}%)<br>
-            <strong>Status:</strong> {{ budget.statusAlert }}
-          </li>
-        {% endfor %}
-      </ul>
-    </section>
-
-    <section>
-      <h2>Resource Allocation</h2>
-      <ul>
-        <li>Total Technicians: {{ roleObject.roleSpecificData.resourceAllocationOverview.totalTechnicians }}</li>
-        <li>Available: {{ roleObject.roleSpecificData.resourceAllocationOverview.availableTechnicians }}</li>
-        <li>On Site: {{ roleObject.roleSpecificData.resourceAllocationOverview.techniciansOnSite }}</li>
-        <li>On Leave: {{ roleObject.roleSpecificData.resourceAllocationOverview.techniciansOnLeave }}</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Upcoming Projects</h2>
-      <ul>
-        {% for project in roleObject.roleSpecificData.resourceAllocationOverview.upcomingProjectsNeedingAllocation %}
-          <li>
-            <strong>Project:</strong> {{ project.projectName }}<br>
-            <strong>Needed Technicians:</strong> {{ project.requiredTechnicians }}<br>
-            <strong>Start Date:</strong> {{ project.startDate }}
-          </li>
-        {% endfor %}
-      </ul>
-    </section>
-
-    <section>
-      <h2>Efficiency Metrics</h2>
-      <ul>
-        <li>Avg. Installation Time: {{ roleObject.roleSpecificData.efficiencyMetrics.averageInstallationTimeDays }} days</li>
-        <li>On-Time Completion Rate: {{ roleObject.roleSpecificData.efficiencyMetrics.onTimeCompletionRatePercentage }}%</li>
-        <li>First-Time Fix Rate: {{ roleObject.roleSpecificData.efficiencyMetrics.firstTimeFixRatePercentage }}%</li>
-      </ul>
-    </section>
-  </article>
-</section>
-
-<a href="/">Get another random role</a>
-
-{% render 'partials/foot.liquid' %}
+  <h1> Data still to come check<a href="/salesman"> Salesman role</a></h1>
+</body>
