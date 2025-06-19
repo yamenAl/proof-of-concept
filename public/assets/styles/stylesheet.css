@@ -11,12 +11,14 @@
   --snow: #FCF8F7;
   --white: #FFFFFF;
   --black: #111;
+  --bg-color: #ffffff;
+  --text-color: #120b11;
 
   /*  FONT  */
   --font-main: 'Nunito', sans-serif;
 
   /*  FONT SIZES  */
-  --text-xs: clamp(0.875rem, 1.5vw, 1rem);
+  --text-xs: clamp(0.5rem, 1.5vw, 1rem);
   --text-sm: clamp(1rem, 2vw, 1.25rem);
   --text-md: clamp(1.25rem, 3vw, 1.5rem);
   --text-lg: clamp(1.5rem, 4vw, 2rem);
@@ -27,26 +29,55 @@
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
   --spacing-lg: 4rem;
+
+  --breakpoint-desktop: 64em;
+  --breakpoint-tablet: 48em;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #302A2F;
+    --text-color: #ffffff;
+  }
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+html{
+      color-scheme: light  dark; /*dark mode*/
+    }
 body {
   min-width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-family: var(--font-main);
   background: var(--snow);
-  color: var(--xiketic);
+  color:canvastext; /*dark mode text*/
   line-height: 1.5;
+      background: repeating-linear-gradient(
+        to right,
+        var(--white),
+        var(--white) 20px,
+        var(--snow) 20px,
+        var(--snow) 100px
+      );
 
 }
-
+/*dark mode*/
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: repeating-linear-gradient(
+          to right,
+          var(--black),
+          var(--black) 20px,
+          var(--raisin-black) 20px,
+          var(--raisin-black) 100px
+        );
+      }
+    }
 /* TYPOGRAPHY  */
 h1, h2, h3, h4, h5 {
   font-family: var(--font-main);
@@ -91,9 +122,9 @@ p, li {
 }
 
 /* === THEMES === */
-.theme-green { background: var(--granny-smith-apple); }
-.theme-orange { background: var(--orange-crayola); }
-.theme-blue { background: var(--majorelle-blue); }
+.theme-controller, .theme-grower { background: var(--granny-smith-apple); }
+.theme-mechanic, .theme-salesman { background: var(--orange-crayola); }
+.theme-orderer, .theme-bossr { background: var(--majorelle-blue); }
 .theme-dark { background: var(--xiketic); color: var(--white); }
 
 /*  SPACING UNIT  */
