@@ -62,10 +62,10 @@ header {
     }
 
     .menu li a:hover {
-    background-color: #050542;
-    color: #66E5BF;
+    background-color: #FF7535;
+    color: #B9FFB7;
     }
-
+    
     button{
       display: hidden;
     }
