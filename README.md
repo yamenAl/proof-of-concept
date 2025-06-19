@@ -2,8 +2,20 @@ Ontwerp en maak een data driven online concept voor een opdrachtgever
 
 De instructies voor deze opdracht staan in: [docs/INSTRUCTIONS.md](https://github.com/fdnd-task/proof-of-concept/blob/main/docs/INSTRUCTIONS.md)
 
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+# Flesk Digtal
+Flesk is an educational prototype built with Node.js, Express, LiquidJS, and vanilla JavaScript. It connects to a public API to load people in different roles, and allows the user to view, favorite, and revisit them.
+
+# Project Goal
+Create an interactive platform with role pages and user information. Allow users to mark favorites and navigate easily. Combine frontend and backend logic using real APIs.
+
+
+
+
+
+
+
+
+
 
 ## Inhoudsopgave
 
