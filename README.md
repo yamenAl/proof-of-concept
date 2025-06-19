@@ -207,7 +207,6 @@ CSS – responsive styles & dark mode
 
 
 ## Installatie
-## Installation
 
 To run this project locally, make sure you have **Node.js** installed.
 
