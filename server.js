@@ -24,6 +24,8 @@ app.set('view engine', 'liquid')
 
 
 const apiRole = "https://fdnd-fresk-api.netlify.app/get-role";
+const roles = ["Controller", "Mechanic", "Grower", "Salesman", "Orderer", "Boss"];
+
 
 // Doe een fetch naar de data die je nodig hebt
 
@@ -59,6 +61,12 @@ app.get('/', async (req, res) => {
 // Dynamic role route
 app.get('/:role', async (req, res) => {
   const role = req.params.role.toLowerCase()
+
+    // Check role 
+  if (!roles.includes(role)) {
+    return res.status(404).render("error"); // Show error page
+  }
+
   const apiUrl = `https://fdnd-fresk-api.netlify.app/get-content-by-role?userRole=${encodeURIComponent(role)}`
   
   try {
@@ -175,10 +183,14 @@ app.get('/favorites/view/:role/:name', async function (req, res) {
 
 
 app.get('/api/roles', (req, res) => {
-  const roles = ["Controller", "Mechanic", "Grower", "Salesman", "Orderer", "Boss"];
   res.json(roles);
 });
 
+
+//error page
+app.use((req, res, next) => {
+  res.status(404).render("error.liquid")
+})
 
 
 
@@ -186,6 +198,6 @@ app.get('/api/roles', (req, res) => {
 // Start server
 app.set('port', process.env.PORT || 8000)
 app.listen(app.get('port'), function () {
-  console.log(`Server running at http://localhost:${app.get('port')}/`)
+  console.log(`Welcome to Flesk Server running at http://localhost:${app.get('port')}/`)
 })
 
