@@ -1,24 +1,29 @@
 {% render 'partials/head.liquid' %}
 {% include 'partials/header.liquid' %}
 
-<main class="main-content">
+
+<main class="main-content hidden">
 
   <!-- Roles List -->
   <section class="roles-list" label="Roles list">
     {% for role in roles %}
       <a href="/{{ role | downcase }}" class="role-button">
-        <picture>
-          <source 
-            srcset="/assets/photos/avatars/{{ role | downcase }}.webp" 
-            type="image/webp"
-          >
-          <img 
-            src="/assets/photos/avatars/{{ role | downcase }}.png" 
-            alt="Avatar for {{ role }} role"
-            width="150" height="150" 
-            loading="lazy"
-          >
-        </picture>
+            <picture>
+      <source 
+        srcset="/assets/photos/avatars/{{ role | downcase }}.webp" 
+        type="image/webp"
+      >
+      <img 
+        src="/assets/photos/avatars/{{ role | downcase }}.png" 
+        alt="Avatar for {{ role }} role"
+        width="150" height="150"
+        {% if forloop.first %}
+          loading="eager" fetchpriority="high"
+        {% else %}
+          loading="lazy"
+        {% endif %}
+      >
+    </picture>
         <h2 class="label">{{ role | capitalize }}</h2>
       </a>
     {% endfor %}

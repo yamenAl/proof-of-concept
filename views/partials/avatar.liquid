@@ -1,21 +1,25 @@
 <section class="hero">
-  
-  <h1 class="role">{{ roleName | capitalize }}</h2>
+  <h1 class="role">{{ roleName | capitalize }}</h1>
 
   <picture>
-    <img src="/assets/photos/avatars/{{ roleName | downcase }}.png" alt="{{ roleName }}" class="avatar" />
+    <source srcset="/assets/photos/avatars/{{ roleName | downcase }}.webp" type="image/webp">
+    <img 
+      src="/assets/photos/avatars/{{ roleName | downcase }}.png" 
+      alt="{{ roleName }}" 
+      class="avatar" 
+      width="100" 
+      height="100" 
+      loading="eager" 
+      fetchpriority="high">
   </picture>
 
-   <h2 class="btn timeline-btn mt-lg">{{ commonData.displayName | split: " " | first }}</h2>
-
-
+  <h2 class="btn timeline-btn mt-lg">{{ commonData.displayName | split: " " | first }}</h2>
 </section>
-
 
 <section class="carousel carousel--markers mt-sm">
   <!-- Slide 1 -->
   <article class="carousel__slide" data-label="User">
-    <figure class="card ">
+    <figure class="card">
       <h2>User ID</h2>
       <p>{{ commonData.userId }}</p>
     </figure>
@@ -23,7 +27,7 @@
 
   <!-- Slide 2 -->
   <article class="carousel__slide" data-label="Name">
-    <figure class="card ">
+    <figure class="card">
       <h2>Display Name</h2>
       <p>{{ commonData.displayName }}</p>
     </figure>
@@ -39,7 +43,7 @@
 
   <!-- Slide 4 -->
   <article class="carousel__slide" data-label="Company">
-    <figure class="card ">
+    <figure class="card">
       <h2>Company</h2>
       <p>{{ commonData.companyName }}</p>
     </figure>
@@ -47,7 +51,7 @@
 
   <!-- Slide 5 -->
   <article class="carousel__slide" data-label="Dashboard">
-    <figure class="card ">
+    <figure class="card">
       <h2>Dashboard</h2>
       <p>{{ commonData.dashboardTitle }}</p>
     </figure>
@@ -65,5 +69,4 @@
       </article>
     {% endif %}
   {% endfor %}
-  
 </section>

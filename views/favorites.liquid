@@ -12,7 +12,15 @@
 
         <!-- Click to see more about this person -->
         <a class="favorite-link" href="/favorites/view/{{ fav.role | downcase }}/{{ fav.name | downcase | replace: ' ', '-' }}">
-          <img src="/assets/photos/avatars/{{ fav.role | downcase }}.png" alt="{{ fav.name }}" />
+          <picture>
+            <source srcset="/assets/photos/avatars/{{ fav.role | downcase }}.webp" type="image/webp">
+            <img 
+              src="/assets/photos/avatars/{{ fav.role | downcase }}.png" 
+              alt="{{ fav.name }}" 
+              width="100" 
+              height="100" 
+              loading="lazy">
+          </picture>
           <h3>{{ fav.name | split: " " | first }}</h3>
           <p>{{ fav.role }}</p>
         </a>
@@ -30,4 +38,3 @@
   <!-- Link to go back home -->
   <a class="back-link" href="/">← Back to Home</a>
 </section>
-
