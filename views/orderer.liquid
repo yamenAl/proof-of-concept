@@ -1,0 +1,21 @@
+{% render 'partials/head.liquid' %}
+{% include 'partials/header.liquid' %}
+{% include 'partials/avatar.liquid' %}
+
+<body>
+  <!-- Favorite Form & Find New Profile -->
+  <section class="button-row-center mt-lg">
+    <form method="POST" action="/favorites">
+      <input type="hidden" name="role" value="{{ roleName }}">
+      <input type="hidden" name="personName" value="{{ commonData.displayName }}">
+      <button type="submit" class="btn-large">
+        {% if isFavorite %}★ Remove Favorite
+        {% else %}☆ Add to Favorites{% endif %}
+      </button>
+    </form>
+    <a href="/{{ roleName }}" class="btn-large">Find new one</a>
+  </section>
+  <h1> Data still to come </h1>
+</body>
+
+{% render 'partials/foot.liquid' %}
