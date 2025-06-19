@@ -1,14 +1,12 @@
 <section class="hero">
   
-  <a href="/{{ roleName }}" class="circle-btn" aria-label="Open menu">→</a>
-
-  <h2 class="role">{{ roleName | capitalize }}</h2>
+  <h1 class="role">{{ roleName | capitalize }}</h2>
 
   <picture>
     <img src="/assets/photos/avatars/{{ roleName | downcase }}.png" alt="{{ roleName }}" class="avatar" />
   </picture>
 
-   <p class="btn timeline-btn mt-lg">{{ commonData.displayName | split: " " | first }}</p>
+   <h2 class="btn timeline-btn mt-lg">{{ commonData.displayName | split: " " | first }}</h2>
 
 
 </section>
@@ -67,4 +65,5 @@
       </article>
     {% endif %}
   {% endfor %}
+  
 </section>
