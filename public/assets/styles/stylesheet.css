@@ -51,6 +51,8 @@ html{
     }
 body {
   min-width: 100vw;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-family: var(--font-main);
@@ -66,6 +68,13 @@ body {
       );
 
 }
+
+
+body::-webkit-scrollbar {
+  display: none;            
+}
+
+
 /*dark mode*/
     @media (prefers-color-scheme: dark) {
       body {
