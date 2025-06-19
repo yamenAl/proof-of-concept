@@ -1,0 +1,103 @@
+.favorites-section {
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.favorites-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-md);
+  padding: 0;
+  list-style: none;
+  margin-top: var(--spacing-md);
+}
+
+/* Card show all personal info need it*/
+.favorite-card {
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 1em;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.favorite-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Avatar */
+.favorite-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 0.5em;
+}
+
+
+.favorite-card h3,
+.favorite-card p {
+  margin: 0.25em 0;
+  color: var(--xiketic);
+  text-decoration: none;
+}
+
+/* Remove underline from links */
+.favorite-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Remove button */
+.remove-btn {
+  background-color: var(--majorelle-blue);
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em 1.5em;
+  margin-top: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: var(--orange-crayola);
+}
+
+/* Back link */
+.back-link {
+  display: inline-block;
+  margin-top: 2em;
+  font-size: var(--text-md);
+  text-decoration: none;
+  color: var(--majorelle-blue);
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .favorite-card {
+    background-color: var(--raisin-black);
+  }
+
+  .favorite-card h3,
+  .favorite-card p {
+    color: var(--white);
+  }
+
+  .remove-btn {
+    background-color: var(--orange-crayola);
+  }
+
+  .remove-btn:hover {
+    background-color: var(--majorelle-blue);
+  }
+}
