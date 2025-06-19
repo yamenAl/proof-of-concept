@@ -1,0 +1,197 @@
+.product-detail-banner,
+.lead-detail-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 28em;
+  padding: 1em 2em;
+  gap: 2em;
+
+  .banner {
+    width: 100%;
+    height: 11em;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .introductie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;       
+    text-align: center;       
+    gap: 1em;
+    padding: 2em;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--xiketic);
+    }
+
+    p {
+      font-size: var(--text-sm);
+      color: var(--raisin-black);
+    }
+
+    .labels {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-sm);
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .label p {
+        display: flex;
+        gap: 0.5em;
+        color: var(--third-text-color);
+
+        strong {
+          color: var(--majorelle-blue);
+        }
+
+        a {
+          color: var(--majorelle-blue);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .features-section {
+      padding-top: 1em;
+
+      h2 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5em;
+      }
+
+      .features {
+        display: grid;
+        gap: 0.5em;
+        padding-left: 1.2em;
+        list-style-type: disc;
+      }
+
+      .red-btn {
+        margin-top: 1.5em;
+      }
+    }
+
+    .red-btn {
+      margin-top: 2em;
+    }
+  }
+}
+/* Responsive layout for large screens */
+@media screen and (min-width: 64em) {
+  .product-detail-banner {
+    padding: 1em 6em;
+    flex-direction: row;
+    gap: 6em;
+
+    .banner {
+      width: 40%;
+      height: 32em;
+    }
+
+    .introductie {
+      width: 50%;
+
+      .labels {
+        gap: 2em;
+      }
+    }
+  }
+}
+
+/* Responsive layout for large screens */
+@media screen and (min-width: 64em) {
+  .lead-detail-banner {
+    padding: 1em 6em;
+    flex-direction: row-reverse;
+    gap: 6em;
+
+  }
+}
+.hidden {
+  display: none;
+}
+
+.red-btn {
+  padding: 0.8em 1.6em;
+  background-color: var(--majorelle-blue);
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  text-align: center;
+  width: fit-content; 
+  max-width: 100%;     
+}
+
+
+.red-btn:hover {
+  background-color: var(--orange-crayola);
+}
+
+
+
+
+/*3 and 4 layout*/
+.card-pair-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch; 
+  }
+}
+
+.detail-card {
+  flex: 1;
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 20rem; 
+  max-width: 100%; 
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--xiketic);
+  }
+
+  .labels {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.75rem;
+    text-align: left;
+  }
+
+  .labels li {
+    font-weight: 400;
+    color: var(--third-text-color);
+  }
+
+  strong {
+    color: var(--majorelle-blue);
+    font-weight: 600;
+  }
+}
