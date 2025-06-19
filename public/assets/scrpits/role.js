@@ -1,38 +1,43 @@
-  const track = document.querySelector('.dot-track');
-  const dots = document.querySelectorAll('.dot');
-  let index = 0;
+// Ask the user if they're sure before removing a favorite
+function confirmFavoriteAction(isFavorite) {
+  if (isFavorite) {
+    return confirm("Are you sure you want to remove this favorite?");
+  } else {
+    return true; // No warning if you're adding a favorite
+  }
+}
 
-  function updateSlide() {
-    const slideWidth = track.clientWidth;
-    track.style.transform = `translateX(-${index * slideWidth}px)`;
+// Run this after the page loads
+document.addEventListener("DOMContentLoaded", () => {
 
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[index].classList.add('active');
+  // This function makes a carousel work
+  function setupCarousel(carouselSelector) {
+    const carousel = document.querySelector(carouselSelector); // find the carousel
+    if (!carousel) return; // stop if it doesn't exist
+
+    const slides = carousel.querySelectorAll(".slide");        // get all slides
+    const nextButtons = carousel.querySelectorAll(".next-btn"); // get all next buttons
+    let current = 0; // start from the first slide
+
+    // Show only one slide at a time
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("hidden", i !== index); // hide others
+      });
+    }
+
+    // When next button is clicked, go to the next slide
+    nextButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        current = (current + 1) % slides.length; // loop back to start
+        showSlide(current);
+      });
+    });
+
+    showSlide(current); // Show the first slide
   }
 
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      index = parseInt(dot.getAttribute('data-index'));
-      updateSlide();
-    });
-  });
-
-  // Swipe left/right
-  let startX = 0;
-  track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-  track.addEventListener('touchend', e => {
-    const diff = e.changedTouches[0].clientX - startX;
-    if (diff > 50 && index > 0) index--;
-    else if (diff < -50 && index < dots.length - 1) index++;
-    updateSlide();
-  });
-
-  updateSlide(); 
-  
-  document.querySelectorAll('.section-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const section = header.parentElement
-      section.classList.toggle('active')
-    })
-  })
-
+  // Set up carousels if they exist
+  setupCarousel(".product-carousel");
+  setupCarousel(".sales-carousel");
+});
