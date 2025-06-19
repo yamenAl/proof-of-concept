@@ -1,22 +1,30 @@
-// Create a list of roles
-const rolesObject = ["Controller", "Mechanic", "Grower", "Salesman", "Orderer", "Boss"];
+// Only run if browser supports fetch and DOMParser
+if ('fetch' in window && 'DOMParser' in window) {
+  // Wait until the page is fully loaded
+  document.addEventListener("DOMContentLoaded", async () => {
+    const roleList = document.getElementById("role-list");
 
-// Get the <ul> element where the roles will be added
-const roleList = document.getElementById("role-list");
+    try {
+      // Fetch role data from the API
+      const response = await fetch("/api/roles");
+      const json = await response.json();
 
-// Loop through each role and add it as a list item with a link
-rolesObject.forEach(role => {
-  const li = document.createElement("li"); // create list item
-  const a = document.createElement("a");   // create anchor link
-
-  a.href = `/${role.toLowerCase()}`;       // set the URL based on role
-  a.textContent = role;                    // set the link text
-
-  li.appendChild(a);                       // put link inside list item
-  roleList.appendChild(li);                // add list item to the list
-});
-
-
+      // Loop through the roles and add them to the list
+      json.forEach(role => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = `/${role.toLowerCase()}`;
+        a.textContent = role;
+        li.appendChild(a);
+        roleList.appendChild(li);
+      });
+    } catch (error) {
+      // Show message if something went wrong
+      console.error("Failed to load roles:", error);
+      roleList.innerHTML = "<li>Failed to load roles.</li>";
+    }
+  });
+}
 // Wait until the page is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
   // Get the toggle button, menu, and close button

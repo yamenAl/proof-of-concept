@@ -174,6 +174,10 @@ app.get('/favorites/view/:role/:name', async function (req, res) {
 })
 
 
+app.get('/api/roles', (req, res) => {
+  const roles = ["Controller", "Mechanic", "Grower", "Salesman", "Orderer", "Boss"];
+  res.json(roles);
+});
 
 
 
