@@ -23,7 +23,7 @@
     <article class="carousel-track">
       {% for product in roleSpecificData.productCatalogs %}
         <section class="product-detail-banner slide {% unless forloop.first %}hidden{% endunless %}">
-          <h1>Product Catalogs {{ product.productName }}</h1>
+          <h1> {{ product.productName }}</h1>
           <section class="introductie">
             <h1>Details</h1>
             <ul class="labels">
@@ -52,7 +52,7 @@
     <article class="carousel-track">
       {% for lead in roleSpecificData.currentSalesLeads %}
         <section class="lead-detail-banner slide {% unless forloop.first %}hidden{% endunless %}">
-          <h1>Current Sales Leads {{ lead.clientName }}</h1>
+          <h1>{{ lead.clientName }}</h1>
           <section class="introductie">
             <ul class="labels">
               <li class="label"><p><strong>Lead ID:</strong> {{ lead.leadId }}</p></li>
