@@ -1,5 +1,4 @@
 .hero {
-  background: var(--majorelle-blue);
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
   padding: var(--spacing-md) var(--spacing-sm) 4rem;

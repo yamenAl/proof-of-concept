@@ -124,7 +124,7 @@ p, li {
 /* === THEMES === */
 .theme-controller, .theme-grower { background: var(--granny-smith-apple); }
 .theme-mechanic, .theme-salesman { background: var(--orange-crayola); }
-.theme-orderer, .theme-bossr { background: var(--majorelle-blue); }
+.theme-orderer, .theme-boss { background: var(--majorelle-blue); }
 .theme-dark { background: var(--xiketic); color: var(--white); }
 
 /*  SPACING UNIT  */
