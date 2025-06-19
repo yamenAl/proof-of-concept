@@ -19,6 +19,8 @@
   transition: transform 0.3s ease, 
   box-shadow 0.3s ease;
   text-decoration: none; 
+  animation: float 3s ease-in-out infinite;
+
 
 }
 
@@ -132,3 +134,12 @@
     text-align: center;
     margin-top: 50px;
   }
+/* Floating animation */
+@keyframes float {
+  0%   { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  25%  { transform: translateY(-4px) translateX(2px) rotate(1deg); }
+  50%  { transform: translateY(4px) translateX(-2px) rotate(-1deg); }
+  75%  { transform: translateY(-3px) translateX(1px) rotate(0.5deg); }
+  100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+}
+
