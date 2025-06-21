@@ -199,11 +199,11 @@
   position: fixed;
   top: 1rem;
   right: 1rem;
-  background: var(--granny-smith-apple-blue);
+  background: var(--orange-crayola);
   color: #ffff;
   padding: 0.75rem 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
