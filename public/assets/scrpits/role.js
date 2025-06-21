@@ -41,3 +41,31 @@ document.addEventListener("DOMContentLoaded", () => {
   setupCarousel(".product-carousel");
   setupCarousel(".sales-carousel");
 });
+
+
+
+//loading & sccess state
+ document.querySelectorAll('.button-row-center form').forEach(form => {
+    form.addEventListener('submit', e => {
+      const button = form.querySelector('button');
+
+      // Add loading state
+      button.disabled = true;
+      const originalText = button.textContent;
+      button.textContent = 'Saving...';
+
+      // Show popup
+      const popup = document.querySelector('.popup');
+      popup.textContent = originalText.includes('Remove') 
+        ? 'Removed from favorites' 
+        : 'Added to favorites';
+      popup.classList.add('show');
+
+      // After delay, reset button (simulate success state)
+      setTimeout(() => {
+        popup.classList.remove('show');
+        button.disabled = false;
+        button.textContent = originalText;
+      }, 2000);
+    });
+  });

@@ -14,6 +14,7 @@
         {% else %}☆ Add to Favorites{% endif %}
       </button>
     </form>
+    <article class="popup" role="alert" aria-live="polite">Added to favorites</article>
     <a href="/{{ roleName }}" class="btn-large theme-{{ roleName }}">Find new one</a>
   </section>
 
@@ -35,7 +36,7 @@
             <section class="features-section">
               <h2>Belangrijkste functies:</h2>
               <ul class="features">
-                {% for feature in product.features %}
+                {% for feature in product.features %} 
                   <li>{{ feature }}</li>
                 {% endfor %}
               </ul>
