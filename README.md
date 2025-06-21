@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/686db3d7-4b8b-4645-958d-7009a43e8340)
+
 # Flesk Digtal?
 The past few weeks I worked on Flesk, a learning platform where you can explore six different roles: Controller, Mechanic, Grower, Salesman, Orderer, and Boss. The main goal was to build a working platform with dynamic pages, favorites, and client-side + server-side data handling using modern frontend and backend tools.
 
