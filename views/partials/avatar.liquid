@@ -19,7 +19,7 @@
 
 <section class="carousel carousel--markers mt-sm">
   <!-- Slide 1 -->
-  <article class="carousel__slide" data-label="User">
+  <article class="carousel__slide" >
     <figure class="card">
       <h2>User ID</h2>
       <p>{{ commonData.userId }}</p>
@@ -27,7 +27,7 @@
   </article>
 
   <!-- Slide 2 -->
-  <article class="carousel__slide" data-label="Name">
+  <article class="carousel__slide" >
     <figure class="card">
       <h2>Display Name</h2>
       <p>{{ commonData.displayName }}</p>
@@ -35,7 +35,7 @@
   </article>
 
   <!-- Slide 3 -->
-  <article class="carousel__slide" data-label="Role">
+  <article class="carousel__slide" >
     <figure class="card">
       <h2>Role</h2>
       <p>{{ commonData.roleName }}</p>
@@ -43,7 +43,7 @@
   </article>
 
   <!-- Slide 4 -->
-  <article class="carousel__slide" data-label="Company">
+  <article class="carousel__slide">
     <figure class="card">
       <h2>Company</h2>
       <p>{{ commonData.companyName }}</p>
@@ -51,7 +51,7 @@
   </article>
 
   <!-- Slide 5 -->
-  <article class="carousel__slide" data-label="Dashboard">
+  <article class="carousel__slide" >
     <figure class="card">
       <h2>Dashboard</h2>
       <p>{{ commonData.dashboardTitle }}</p>
@@ -62,7 +62,7 @@
   {% assign perspectiveParts = commonData.companyPerspectiveHtml | split: '</p>' %}
   {% for part in perspectiveParts %}
     {% if part != '' %}
-      <article class="carousel__slide" data-label="Perspective">
+      <article class="carousel__slide">
         <figure class="card">
           <h2>Perspective</h2>
           <p>{{ part | append: '</p>' | raw }}</p>
